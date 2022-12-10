@@ -1,0 +1,420 @@
+:root {
+    --primary-text-color: rgba(255, 255, 255, 1);
+    --iris-color: rgba(77, 90, 229, 1);
+    --navy-blue-color: rgba(46, 47, 66, 1);
+    --slate-color: rgba(67, 68, 85, 1);
+    --cloud-color: rgba(244, 244, 253, 1);
+    --cornflower-color: rgba(231, 233, 252, 1);
+}
+
+.body {
+    color: var(--navy-blue-color);
+    background-color: #ffffff;
+
+    font-family: Roboto, sans-serif;
+}
+
+.container {
+    width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* Знаю, що небажано так приховувати елементи, однак ми ще не проходили на заняттях альтернативний підхід до приховування елементів. */
+.hidden {
+    display: none;
+}
+
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.logo,
+.link,
+.contact-link {
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    
+    font-family: Raleway, sans-serif;
+    color: var(--navy-blue-color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.33;
+    text-align: left;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.page-header {    
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.page-header .web-part {
+    display: flex;
+    align-items: center;
+    
+    color: var(--iris-color);
+}
+
+.page-header .container {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav {
+    display: flex;
+}
+
+.site-nav {
+    display: flex;
+    margin-left: 77px;
+}
+
+.site-nav .item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.site-nav .link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    
+    color: var(--navy-blue-color);
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: 0.02em;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus,
+.site-nav .link:active {
+    color: var(--iris-color);
+}
+
+.support {
+    display: flex;
+    margin-left: auto;
+}
+
+.support .item + .item {
+    margin-left: 40px;
+}
+
+.support .contact-link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    
+    color: var(--slate-color);
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: 0.02em;
+}
+
+.support .contact-link:hover,
+.support .contact-link:focus,
+.support .contact-link:active {
+    color: var(--iris-color);
+}
+
+.hero {
+    background-color: var(--navy-blue-color);
+    color: var(--primary-text-color);
+
+    text-align: center;
+    padding-top: 192px;
+    padding-bottom: 192px;
+}
+
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.products {
+    padding-top: 0;
+}
+
+.vision .list {
+    display: flex;
+}
+
+.vision .section-item {
+    width: 264px;
+}
+
+.vision .section-item + .section-item {
+    margin-left: 24px;
+    max-width: 264px;
+}
+
+.section .section-title {
+    margin-bottom: 72px;
+}
+
+.hero-title {
+    width: 496px;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 48px;
+    margin-left: auto;
+}
+
+.order-btn,
+.portfolio-btn {
+    cursor: pointer;
+    
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+}
+
+.order-btn {
+    background-color: var(--iris-color);
+    color: var(--primary-text-color);
+
+    line-height: 1.19;
+    text-align: left;
+
+    padding: 16px 32px;
+    border-radius: 4px;
+    border-style: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.order-btn:hover,
+.order-btn:focus {
+    background-color: var(--iris-color);
+}
+
+.order-btn:active {
+    background-color: rgba(64, 75, 191, 1);
+}
+
+.portfolio-btn {
+    background-color: var(--cloud-color);
+    color: var(--iris-color);
+
+    line-height: 1.5;
+    text-align: center;
+
+    line-height: 1.5;
+    padding: 12px 24px;
+    border-radius: 4px;
+    border: 1px solid #E7E9FC;
+}
+
+.portfolio-btn:hover,
+.portfolio-btn:focus,
+.portfolio-btn:active {
+    background-color: var(--iris-color);
+    color: var(--primary-text-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-color: transparent;
+}
+
+.section-title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section-item {
+    background-color: var(--primary-text-color);
+}
+
+.section-item .subject {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: left;
+    letter-spacing: 0.02em;
+
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.section-item .text {
+    color: var(--slate-color);
+
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: 0.02em;
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.products .list {
+    display: flex;
+    justify-content: center;
+}
+
+.products .section-item+.section-item {
+    margin-left: 24px;
+}
+
+.products .product-img {
+    background: linear-gradient(0deg, rgba(77, 90, 229, 0.1), rgba(77, 90, 229, 0.1)), url(photo-1545235617-7a424c1a60cc.jpg);
+    background-blend-mode: soft-light, normal;
+    border: 1px solid var(--cornflower-color);
+}
+
+.team {
+    background-color: var(--cloud-color);
+}
+
+.team .list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.team .section-item {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team .text-box {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+/* Я додав відцентрування в ПІБ та посадах в секції Our team, бо в Figma по ним зазначено: "Align: Center".*/
+.section-item .center {
+    text-align: center;
+}
+
+.page-footer {
+    background-color: var(--navy-blue-color);
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.page-footer .logo {
+    color: var(--cloud-color);
+
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.page-footer .web-part {
+    color: var(--iris-color);
+}
+
+.page-footer .text {
+    color: var(--cornflower-color);
+    
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: 0.02em;
+
+    margin-top: 16px;
+    margin-bottom: 0;
+    max-width: 269px;
+}
+
+.section-portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.portfolio-btn_list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 72px;
+}
+
+.portfolio-cards_list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+
+.portfolio-cards_item {
+    flex-basis: calc((100% - 2 * 24px) / 3);
+}
+
+.portfolio-cards_item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.portfolio-cards_box {
+    border: 0.5px solid #F4F4FD;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.contacts {
+    padding-top: 24px;
+    padding-right: auto;
+    padding-bottom: 96px;
+    padding-left: auto;
+}
+
+.contacts .contact-card {
+    display: flex;
+    background-color: var(--cloud-color);
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    padding: 24px;
+    align-items: center;
+}
+
+.contacts .line-one,
+.contacts .line-two,
+.contacts .line-three {
+    margin: 0;
+    padding-bottom: 8px;
+}
+
+.contacts .support {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.map {
+    display: block;
+    border-radius: 4px;
+    border: 1px solid #E7E9FC;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
