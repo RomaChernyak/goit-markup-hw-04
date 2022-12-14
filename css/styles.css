@@ -3,8 +3,10 @@
     --iris-color: rgba(77, 90, 229, 1);
     --navy-blue-color: rgba(46, 47, 66, 1);
     --slate-color: rgba(67, 68, 85, 1);
+    --light-slate-color: rgba(142, 143, 153, 1);
     --cloud-color: rgba(244, 244, 253, 1);
     --cornflower-color: rgba(231, 233, 252, 1);
+    --green-color: rgba(49, 208, 170, 1);
 }
 
 .body {
@@ -120,14 +122,36 @@
     letter-spacing: 0.02em;
 }
 
+.support .icon {
+    display: inline-block;
+
+    fill: var(--slate-color);
+
+    width: 24px;
+    height: 16px;
+}
+
 .support .contact-link:hover,
 .support .contact-link:focus,
 .support .contact-link:active {
     color: var(--iris-color);
 }
 
+.support .contact-link:hover > .icon,
+.support .contact-link:focus > .icon,
+.support .contact-link:active > .icon {
+    fill: var(--iris-color);
+}
+
 .hero {
+    background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg.jpg);
     background-color: var(--navy-blue-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-image: url(../images/dark-bg.png); */
+    background-size: cover;
+    max-width: 1440px;
+
     color: var(--primary-text-color);
 
     text-align: center;
@@ -151,6 +175,54 @@
 .vision .section-item {
     width: 264px;
 }
+
+.vision .section-item::before {
+    display: block;
+    content: "";
+    height: 112px;
+    width: 264px;
+    border-radius: 4px;
+    
+    margin-bottom: 8px;
+    /* outline: 1px solid red; */
+
+    background-color: var(--cloud-color);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.vision .section-item:nth-child(1):before {
+    background-image: url(../images/antenna.svg);
+}
+
+.vision .section-item:nth-child(2):before {
+    background-image: url(../images/clock.svg);
+}
+
+.vision .section-item:nth-child(3):before {
+    background-image: url(../images/diagram.svg);
+}
+
+.vision .section-item:nth-child(4):before {
+    background-image: url(../images/astronaut.svg);
+}
+
+/* Іншим способом:
+.vision .icon-antenna::before {
+    background-image: url(../images/antenna.svg);
+}
+
+.vision .icon-clock::before {
+    background-image: url(../images/clock.svg);
+}
+
+.vision .icon-diagram::before {
+    background-image: url(../images/diagram.svg);
+}
+
+.vision .icon-astronaut::before {
+    background-image: url(../images/astronaut.svg);
+} */
 
 .vision .section-item + .section-item {
     margin-left: 24px;
@@ -210,7 +282,6 @@
     background-color: var(--cloud-color);
     color: var(--iris-color);
 
-    line-height: 1.5;
     text-align: center;
 
     line-height: 1.5;
@@ -276,7 +347,6 @@
 
 .products .product-img {
     background: linear-gradient(0deg, rgba(77, 90, 229, 0.1), rgba(77, 90, 229, 0.1)), url(photo-1545235617-7a424c1a60cc.jpg);
-    background-blend-mode: soft-light, normal;
     border: 1px solid var(--cornflower-color);
 }
 
@@ -307,11 +377,94 @@
     text-align: center;
 }
 
+.team .social-media_list {
+    display: flex;
+    margin-top: 8px;
+    padding-top: 4px;
+    padding-right: 16px;
+    padding-bottom: 4px;
+    padding-left: 16px;
+}
+
+.team .social-media_item {
+    background-color: var(--iris-color);
+    border: none;
+    border-radius: 50%;
+}
+
+.team .social-media_item:hover,
+.team .social-media_item:focus {
+    background-color: var(--green-color);
+    cursor: pointer;
+}
+
+.team .social-media_link {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.customers_list {
+    display: flex;
+}
+
+.customers_list .customers_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 168px;
+    height: 88px;
+    box-sizing: border-box;
+    border: 1px solid var(--light-slate-color);
+    border-radius: 4px;
+
+    padding-top: 16px;
+    padding-right: 32px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+
+    margin-right: 24px;
+}
+
+.customers_list :last-child {
+    margin-right: 0px;
+}
+
+.customers_list .customer_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 104px;
+    height: 56px;
+    fill: var(--light-slate-color);
+}
+
+.customers_list .customers_item:hover,
+.customers_list .customers_item:focus {
+    border-color: var(--iris-color);
+}
+
+.customers_list .customers_item:hover > .customer_link,
+.customers_list .customers_item:focus > .customer_link {
+    fill: var(--iris-color);
+}
+
 .page-footer {
     background-color: var(--navy-blue-color);
 
     padding-top: 100px;
     padding-bottom: 100px;
+}
+
+.page-footer .container {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 120px;
 }
 
 .page-footer .logo {
@@ -334,14 +487,47 @@
 
     margin-top: 16px;
     margin-bottom: 0;
-    max-width: 269px;
+    width: 264px;
+}
+
+.page-footer .social-media_title {
+    margin-top: 0;
+    margin-bottom: 16px;
+
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    color: var(--primary-text-color);
+}
+
+.page-footer .social-media_list {
+    display: flex;
+    gap: 16px;
+}
+
+.page-footer .social-media_item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+}
+
+.page-footer .social-media_item:hover,
+.page-footer .social-media_item:focus {
+    background-color: var(--green-color);
+    cursor: pointer;
+}
+
+.page-footer .social-media_link {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-portfolio {
     padding-top: 96px;
     padding-bottom: 120px;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 .portfolio-btn_list {
@@ -360,16 +546,18 @@
 
 .portfolio-cards_item {
     flex-basis: calc((100% - 2 * 24px) / 3);
+    border: 0.5px solid #F4F4FD;
 }
 
 .portfolio-cards_item:nth-child(3n) {
     margin-right: 0;
 }
 
-.portfolio-cards_box {
-    border: 0.5px solid #F4F4FD;
+.portfolio-cards_item:hover {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 
+.portfolio-cards_box {
     padding-top: 32px;
     padding-bottom: 32px;
     padding-left: 16px;
