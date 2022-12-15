@@ -157,6 +157,7 @@
     text-align: center;
     padding-top: 192px;
     padding-bottom: 192px;
+    margin: 0 auto;
 }
 
 .section {
@@ -369,8 +370,12 @@
 .team .text-box {
     padding-top: 32px;
     padding-bottom: 32px;
-    padding-left: auto;
-    padding-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.team .text {
+    margin-bottom: 8px;
 }
 
 /* Я додав відцентрування в ПІБ та посадах в секції Our team, бо в Figma по ним зазначено: "Align: Center".*/
@@ -380,11 +385,8 @@
 
 .team .social-media_list {
     display: flex;
-    margin-top: 8px;
     padding-top: 4px;
-    padding-right: 16px;
     padding-bottom: 4px;
-    padding-left: 16px;
 }
 
 .team .social-media_item {
@@ -393,18 +395,19 @@
     border-radius: 50%;
 }
 
-.team .social-media_item:hover,
-.team .social-media_item:focus {
-    background-color: var(--green-color);
-    cursor: pointer;
-}
-
 .team .social-media_link {
     display: flex;
     width: 40px;
     height: 40px;
     justify-content: center;
     align-items: center;
+}
+
+.team .social-media_link:hover,
+.team .social-media_link:focus {
+    background-color: var(--green-color);
+    cursor: pointer;
+    border-radius: inherit;
 }
 
 .customers_list {
@@ -419,13 +422,6 @@
     width: 168px;
     height: 88px;
     box-sizing: border-box;
-    border: 1px solid var(--light-slate-color);
-    border-radius: 4px;
-
-    padding-top: 16px;
-    padding-right: 32px;
-    padding-bottom: 16px;
-    padding-left: 32px;
 
     margin-right: 24px;
 }
@@ -439,18 +435,17 @@
     justify-content: center;
     align-items: center;
 
-    width: 104px;
-    height: 56px;
+    border: 1px solid var(--light-slate-color);
+    border-radius: 4px;
+
+    width: 168px;
+    height: 88px;
     fill: var(--light-slate-color);
 }
 
-.customers_list .customers_item:hover,
-.customers_list .customers_item:focus {
+.customers_list .customer_link:hover,
+.customers_list .customer_link:focus {
     border-color: var(--iris-color);
-}
-
-.customers_list .customers_item:hover > .customer_link,
-.customers_list .customers_item:focus > .customer_link {
     fill: var(--iris-color);
 }
 
@@ -512,18 +507,19 @@
     border-radius: 50%;
 }
 
-.page-footer .social-media_item:hover,
-.page-footer .social-media_item:focus {
-    background-color: var(--green-color);
-    cursor: pointer;
-}
-
 .page-footer .social-media_link {
     display: flex;
     width: 40px;
     height: 40px;
     justify-content: center;
     align-items: center;
+}
+
+.page-footer .social-media_link:hover,
+.page-footer .social-media_link:focus {
+    background-color: var(--green-color);
+    cursor: pointer;
+    border-radius: inherit;
 }
 
 .section-portfolio {
